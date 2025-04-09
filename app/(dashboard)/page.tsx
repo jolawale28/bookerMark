@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import { Box, Button, Grid2, Skeleton } from '@mui/material';
 import { BookmarkAdd } from '@mui/icons-material';
 import BookMarkCard from '../components/BookMarkCard';
-import { AddBookmarkDialog } from '../components/DialogComp';
+import { AddBookmarkDialog, EditBookmarkDialog } from '../components/DialogComp';
 import { collection, getDocs, orderBy, query, where } from 'firebase/firestore';
 import { db } from '../lib/firebase';
 import { BookmarkCardSkeleton } from '../components/Skeletons';
@@ -86,6 +86,7 @@ export default function HomePage() {
         }
       </Grid2>
       <AddBookmarkDialog ref={addBookmarkDialogRef} setRefreshKey={setRefreshKey} />
+      
     </>
   );
 }

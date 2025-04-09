@@ -16,7 +16,7 @@ import { timeAgoFromTimestamp } from '../lib/utitlities';
 import { doc, deleteDoc } from "firebase/firestore";
 import { db } from "@/app/lib/firebase";
 import { useSnackbar } from './SnackBarProvider';
-import { ConfirmDialog } from './DialogComp';
+import { ConfirmDialog, EditBookmarkDialog } from './DialogComp';
 import { useCopyToClipboard } from '../lib/hooks';
 
 export default function BookMarkCard({ id, title, url, createdAt, setRefreshKey }: Bookmark) {
@@ -24,7 +24,7 @@ export default function BookMarkCard({ id, title, url, createdAt, setRefreshKey 
     const [bookmarkID, setBookmarkID] = useState('')
 
     const { showMessage } = useSnackbar();
-    const {copy} = useCopyToClipboard()
+    const { copy } = useCopyToClipboard()
 
     const [confirmDeleteOpen, setConfirmDeleteOpen] = useState(false);
 
@@ -35,6 +35,11 @@ export default function BookMarkCard({ id, title, url, createdAt, setRefreshKey 
     };
     const handleClose = () => {
         setAnchorEl(null);
+    };
+
+    const editBookmarkDialogRef = React.useRef<{ open: () => void; close: () => void }>(null);
+    const handleOpenEditDialog = () => {
+        editBookmarkDialogRef.current?.open();
     };
 
     const [deleteBookmarkStart, startBookmarkDelete] = React.useTransition()
@@ -67,6 +72,7 @@ export default function BookMarkCard({ id, title, url, createdAt, setRefreshKey 
                 onConfirm={deleteBookmark}
                 onCancel={() => { setConfirmDeleteOpen(false) }}
             />
+            <EditBookmarkDialog ref={editBookmarkDialogRef} setRefreshKey={setRefreshKey} id = {id} url={url} title={title} />
             <Card sx={{ maxWidth: '100%' }}>
                 <CardHeader
                     avatar={
@@ -95,7 +101,10 @@ export default function BookMarkCard({ id, title, url, createdAt, setRefreshKey 
 
                             >
                                 <MenuList sx={{ width: '200px' }}>
-                                    <MenuItem>
+                                    <MenuItem onClick={() => {
+                                        handleClose()
+                                        handleOpenEditDialog()
+                                    }}>
                                         <ListItemIcon>
                                             <Edit fontSize="small" />
                                         </ListItemIcon>
@@ -150,7 +159,7 @@ export default function BookMarkCard({ id, title, url, createdAt, setRefreshKey 
                 <Divider />
                 <CardContent>
                     <Tooltip title={url} placement='top' arrow>
-                        <Link href = "/jhghfhjkk" target="_blank" rel="noopener noreferrer" variant="body2" sx={{ color: 'text.secondary', cursor: 'pointer', textDecoration: 'none', '&:hover': {textDecoration: 'underline'} }} className='line-clamp-1' onClick = {() => alert()}>
+                        <Link href="/jhghfhjkk" target="_blank" rel="noopener noreferrer" variant="body2" sx={{ color: 'text.secondary', cursor: 'pointer', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }} className='line-clamp-1' onClick={() => alert()}>
                             {url}
                         </Link>
                     </Tooltip>
