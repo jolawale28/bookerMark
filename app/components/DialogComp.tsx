@@ -91,7 +91,7 @@ export const AddBookmarkDialog = ({ ref: refProp, setRefreshKey }: AddBookmarkDi
                 slotProps={{
                     paper: {
                         sx: {
-                            minWidth: 500, // or use width: 500, or maxWidth, etc.
+                            width: 500
                         },
                     },
                 }}

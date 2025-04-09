@@ -40,7 +40,7 @@ export default function SignInPage() {
                 showMessage(`Account created! Welcome, ${signInRef.user.displayName}.`, 'success', false, false);
             }
             else {
-                showMessage(`Sign-in success! Welcome back ${signInRef.user.displayName}`, 'success.', false, false)
+                showMessage(`Sign-in success! Welcome back ${signInRef.user.displayName}`, 'success', false, false)
             }
 
             router.push('/');
