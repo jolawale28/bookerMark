@@ -50,7 +50,7 @@ export default function HomePage() {
 
   return (
     <>
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', marginBottom: 2 }}>
+      <Box sx={{ display: 'flex', flexDirection: {sm: 'row', xs: 'column'}, justifyContent: 'space-between', marginBottom: 2 }}>
         <Typography variant="h5" component="h5">
           My Saves ({bookmarks.length})
         </Typography>
@@ -64,14 +64,14 @@ export default function HomePage() {
       <Grid2 container spacing={2}>
         {
           (fetchBookmarks) && ([1, 2, 4]).map((_, idx) => (
-            <Grid2 size={{ xs: 6, md: 4 }} key={`skeleton_card_bookmarks_${idx}`}>
+            <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 4, xl: 3 }} key={`skeleton_card_bookmarks_${idx}`}>
               <BookmarkCardSkeleton />
             </Grid2>
           ))
         }
         {
           (!fetchBookmarks && bookmarks.length > 0) && bookmarks.map((ele, idx) => (
-            <Grid2 size={{ xs: 6, md: 4 }} key={`hgfyut_${idx}`}>
+            <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 4, xl: 3 }} key={`hgfyut_${idx}`}>
               <BookMarkCard id={ele.id} title={ele.title} url={ele.url} createdAt={ele.createdAt} setRefreshKey={setRefreshKey} />
             </Grid2>
           ))

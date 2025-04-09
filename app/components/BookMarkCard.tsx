@@ -67,7 +67,7 @@ export default function BookMarkCard({ id, title, url, createdAt, setRefreshKey 
                 onConfirm={deleteBookmark}
                 onCancel={() => { setConfirmDeleteOpen(false) }}
             />
-            <Card sx={{ maxWidth: 345 }}>
+            <Card sx={{ maxWidth: '100%' }}>
                 <CardHeader
                     avatar={
                         <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
