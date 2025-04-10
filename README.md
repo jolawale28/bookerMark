@@ -1,8 +1,13 @@
 ![Logo](https://booker-mark.vercel.app/_next/image?url=%2Ffavicon.png&w=128&q=75)
 
-### bookerMark
+# BookerMark
 
 A bookmark manager application.
+
+### Demo
+
+![Demo](https://booker-mark.vercel.app/preview_signin.png)
+![Demo](https://booker-mark.vercel.app/preview_home.png)
 
 ### Getting Started
 
@@ -23,6 +28,19 @@ Ensure you have the following installed on your system:
 git clone https://github.com/jolawale28/bookerMark.git
 cd bookerMark
 ```
+
+## Environment Variables
+
+This project used a .env file for envrionment-specific configuratios. Create a .env file in the root directory and add the required variables.
+* `NEXT_PUBLIC_APIKEY=your-firebase-api-key`
+* `NEXT_PUBLIC_AUTHDOMAIN=your-firebase-auth-domain`
+* `NEXT_PUBLIC_DATABASEURL=your-firebase-database-url`
+* `NEXT_PUBLIC_PROJECTID=your-firebase-project-id`
+* `NEXT_PUBLIC_STORAGEBUCKET=your-firebase-storage-bucket`
+* `NEXT_PUBLIC_MESSAGINGSENDERID=your-firebase-messaging-sender-id`
+* `NEXT_PUBLIC_APPID=your-firebase-app-id`
+* `NEXT_PUBLIC_MEASUREMENTID=your-firebase-measurement-id`
+* `NEXT_PUBLIC_VAPID_KEY=your-vapid-key`
 
 ## Install Dependencies
 
@@ -51,7 +69,8 @@ yarn dev
 The application will be available at https://localhost:3000
 
 Build for Production
-To build the project for production:
+
+*To build the project for production:*
 
 ```sh
 npm run build
@@ -62,19 +81,6 @@ or
 ```sh
 yarn start
 ```
-
-## Environment Variables
-
-This project used a .env file for envrionment-specific configuratios. Create a .env file in the root directory and add the required variables.
-* `NEXT_PUBLIC_APIKEY=your-firebase-api-key`
-* `NEXT_PUBLIC_AUTHDOMAIN=your-firebase-auth-domain`
-* `NEXT_PUBLIC_DATABASEURL=your-firebase-database-url`
-* `NEXT_PUBLIC_PROJECTID=your-firebase-project-id`
-* `NEXT_PUBLIC_STORAGEBUCKET=your-firebase-storage-bucket`
-* `NEXT_PUBLIC_MESSAGINGSENDERID=your-firebase-messaging-sender-id`
-* `NEXT_PUBLIC_APPID=your-firebase-app-id`
-* `NEXT_PUBLIC_MEASUREMENTID=your-firebase-measurement-id`
-* `NEXT_PUBLIC_VAPID_KEY=your-vapid-key`
 
 Replace the placeholder values with your actual Firebase and VAPID key configurations.
 
@@ -87,3 +93,7 @@ or
 ```sh
 yarn lint
 ```
+
+## Authors
+
+- Joseph Olawale Bamidele [@jolawale28](https://www.github.com/jolawale28)
