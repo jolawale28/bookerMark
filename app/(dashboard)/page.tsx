@@ -52,7 +52,7 @@ export default function HomePage() {
     <>
       <Box sx={{ display: 'flex', flexDirection: {sm: 'row', xs: 'column'}, justifyContent: 'space-between', marginBottom: 2 }}>
         <Typography variant="h5" component="h5">
-          My Saves ({bookmarks.length})
+          My Bookmarks ({bookmarks.length})
         </Typography>
         <Button sx={{ display: 'flex', gap: 1 }} variant='contained' onClick={handleOpenDialog}>
           <BookmarkAdd />

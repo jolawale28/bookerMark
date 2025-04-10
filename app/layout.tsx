@@ -28,11 +28,11 @@ const NAVIGATION: Navigation = [
     title: 'Home',
     icon: <DashboardIcon />,
   },
-  {
-    segment: 'orders',
-    title: 'Orders',
-    icon: <ShoppingCartIcon />,
-  },
+  // {
+  //   segment: 'orders',
+  //   title: 'Orders',
+  //   icon: <ShoppingCartIcon />,
+  // },
   {
     title: 'Sign Out',
     segment: 'signout',
