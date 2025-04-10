@@ -1,8 +1,10 @@
-# bookerMark
+![Logo](https://booker-mark.vercel.app/_next/image?url=%2Ffavicon.png&w=128&q=75)
+
+### bookerMark
 
 A bookmark manager application.
 
-## Getting Started
+### Getting Started
 
 Follow these steps to run the project locally:
 
@@ -47,6 +49,7 @@ yarn dev
 ```
 
 The application will be available at https://localhost:3000
+
 Build for Production
 To build the project for production:
 
@@ -63,15 +66,15 @@ yarn start
 ## Environment Variables
 
 This project used a .env file for envrionment-specific configuratios. Create a .env file in the root directory and add the required variables.
-`NEXT_PUBLIC_APIKEY=your-firebase-api-key`
-`NEXT_PUBLIC_AUTHDOMAIN=your-firebase-auth-domain`
-`NEXT_PUBLIC_DATABASEURL=your-firebase-database-url`
-`NEXT_PUBLIC_PROJECTID=your-firebase-project-id`
-`NEXT_PUBLIC_STORAGEBUCKET=your-firebase-storage-bucket`
-`NEXT_PUBLIC_MESSAGINGSENDERID=your-firebase-messaging-sender-id`
-`NEXT_PUBLIC_APPID=your-firebase-app-id`
-`NEXT_PUBLIC_MEASUREMENTID=your-firebase-measurement-id`
-`NEXT_PUBLIC_VAPID_KEY=your-vapid-key`
+* `NEXT_PUBLIC_APIKEY=your-firebase-api-key`
+* `NEXT_PUBLIC_AUTHDOMAIN=your-firebase-auth-domain`
+* `NEXT_PUBLIC_DATABASEURL=your-firebase-database-url`
+* `NEXT_PUBLIC_PROJECTID=your-firebase-project-id`
+* `NEXT_PUBLIC_STORAGEBUCKET=your-firebase-storage-bucket`
+* `NEXT_PUBLIC_MESSAGINGSENDERID=your-firebase-messaging-sender-id`
+* `NEXT_PUBLIC_APPID=your-firebase-app-id`
+* `NEXT_PUBLIC_MEASUREMENTID=your-firebase-measurement-id`
+* `NEXT_PUBLIC_VAPID_KEY=your-vapid-key`
 
 Replace the placeholder values with your actual Firebase and VAPID key configurations.
 
