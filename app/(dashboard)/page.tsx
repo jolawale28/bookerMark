@@ -10,6 +10,7 @@ import { collection, getDocs, orderBy, query, where } from 'firebase/firestore';
 import { db } from '../lib/firebase';
 import { BookmarkCardSkeleton } from '../components/Skeletons';
 import { useAuth } from '../context/AppContext';
+import NotificationPermission from '../components/NotificationPermission';
 
 export default function HomePage() {
 
@@ -60,6 +61,8 @@ export default function HomePage() {
         </Button>
 
       </Box>
+
+      <NotificationPermission />
 
       <Grid2 container spacing={2}>
         {

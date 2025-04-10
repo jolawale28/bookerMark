@@ -15,6 +15,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import { SnackbarProvider } from './components/SnackBarProvider';
 import LogoutIcon from '@mui/icons-material/Logout';
 import UserAvatar from './components/UserAvatar';
+import RegisterSW from '@/app/components/RegisterSW';
 
 import '@/app/styles/globals.css'
 
@@ -67,6 +68,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
                   theme={theme}
                 >
                   <SnackbarProvider>
+                    <RegisterSW />
                     {props.children}
                   </SnackbarProvider>
                   <NextTopLoader
