@@ -150,12 +150,12 @@ export default function BookMarkCard({ id, title, url, createdAt, setRefreshKey 
                     }
                     subheader={timeAgoFromTimestamp(createdAt.seconds)}
                 />
-                <CardMedia
+                {/* <CardMedia
                     component="img"
                     height="100"
                     image={'https://mui.com/static/images/cards/paella.jpg'}
                     alt="Paella dish"
-                />
+                /> */}
                 <Divider />
                 <CardContent>
                     <Tooltip title={url} placement='top' arrow>
