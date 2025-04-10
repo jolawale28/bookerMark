@@ -159,7 +159,7 @@ export default function BookMarkCard({ id, title, url, createdAt, setRefreshKey 
                 <Divider />
                 <CardContent>
                     <Tooltip title={url} placement='top' arrow>
-                        <Link href="/jhghfhjkk" target="_blank" rel="noopener noreferrer" variant="body2" sx={{ color: 'text.secondary', cursor: 'pointer', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }} className='line-clamp-1' onClick={() => alert()}>
+                        <Link href="/jhghfhjkk" target="_blank" rel="noopener noreferrer" variant="body2" sx={{ color: 'text.secondary', cursor: 'pointer', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }} className='line-clamp-1'>
                             {url}
                         </Link>
                     </Tooltip>
